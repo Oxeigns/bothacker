@@ -1,0 +1,43 @@
+{
+  "name": "The-Omnipotent-X-Destroyer",
+  "description": "Internet's Most Dangerous 24/7 Silent Bot Hunter and Data Exfiltrator",
+  "repository": "https://github.com/yourusername/yourrepo",
+  "logo": "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304651167347a8.svg",
+  "keywords": ["telegram", "hacker", "bot-hunter", "automated", "python"],
+  "env": {
+    "GH_TOKENS": {
+      "description": "Apne saare GitHub tokens yahan dalo, comma (,) se separate karke. Example: ghp_123,ghp_456",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Tera wo bot jo tujhe logs bhejega (Log Bot Token)",
+      "required": true
+    },
+    "LOG_CHAT": {
+      "description": "Tera Telegram Group ID jahan sara 'Maal' aayega. Example: -100123456789",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Telegram API ID (Optional, defaults to God-Level)",
+      "value": "35335474",
+      "required": false
+    },
+    "API_HASH": {
+      "description": "Telegram API Hash (Optional, defaults to God-Level)",
+      "value": "65c9d8d32a75ba9af8cc401d940b5957",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}

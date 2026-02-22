@@ -1,9 +1,33 @@
-import os
+"""
+SINGULARITY-X Configuration File
+Fill in your credentials and API keys
+"""
 
 class Config:
-    # Heroku Config Vars mein comma (,) se 50 tokens dalo
-    GH_TOKENS = os.environ.get("GH_TOKENS", "").split(",")
-    API_ID = int(os.environ.get("API_ID", "35335474"))
-    API_HASH = os.environ.get("API_HASH", "65c9d8d32a75ba9af8cc401d940b5957")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") # Tera Log Bot
-    LOG_CHAT = int(os.environ.get("LOG_CHAT", "-1003577257855"))
+    # Telegram Bot Credentials (for notifications)
+    API_ID = 12345678  # Your Telegram API ID from my.telegram.org
+    API_HASH = "your_api_hash_here"  # Your Telegram API Hash
+    BOT_TOKEN = "your_bot_token_here"  # Your bot token for sending reports
+    LOG_CHAT = -1001234567890  # Chat ID where reports are sent (can be your user ID)
+    
+    # GitHub Personal Access Tokens (for GitHub API - get from github.com/settings/tokens)
+    # Add multiple tokens to rotate and avoid rate limits
+    GH_TOKENS = [
+        "ghp_your_token_1_here",
+        "ghp_your_token_2_here",
+        # Add more tokens as needed
+    ]
+    
+    # Optional: GitLab Tokens
+    GITLAB_TOKENS = [
+        # "glpat-your-gitlab-token",
+    ]
+    
+    # Optional: Custom Webhook for intercepted messages
+    WEBHOOK_URL = "https://your-webhook-endpoint.com/telegram-intercept"
+    
+    # Optional: Proxy settings for anonymity
+    PROXIES = [
+        # "http://user:pass@proxy:port",
+        # "socks5://user:pass@proxy:port",
+    ]

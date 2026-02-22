@@ -1,6 +1,6 @@
 aiohttp
 telethon
 aiolimiter
-asyncio
 python-dotenv
 motor
+aiofiles

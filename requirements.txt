@@ -4,3 +4,4 @@ aiolimiter
 python-dotenv
 motor
 aiofiles
+aiosqlite

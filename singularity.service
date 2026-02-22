@@ -1,0 +1,22 @@
+[Unit]
+Description=Singularity-X 24/7 Token Scanner
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/user
+ExecStart=/usr/bin/python3 /home/user/singularity_x_ultimate.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/user/singularity.log
+StandardError=append:/home/user/singularity.log
+Environment=PYTHONUNBUFFERED=1
+
+# Resource limits
+LimitNOFILE=65536
+MemoryMax=3G
+CPUQuota=80%
+
+[Install]
+WantedBy=multi-user.target
